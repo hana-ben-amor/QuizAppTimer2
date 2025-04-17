@@ -1,0 +1,15 @@
+<div class="spinner">
+    <svg width="50" height="50" viewBox="0 0 36 36">
+      <path
+        fill="none"
+        stroke="#007bff"
+        stroke-width="4"
+        [attr.stroke-dasharray]="timeLeft * 10 + ', 100'"
+
+        d="M18 2a16 16 0 1 1-0.01 0z"
+      />
+      <text x="18" y="20" text-anchor="middle" fill="#000" font-size="8">
+        {{ currentIndex }}
+      </text>
+    </svg>
+  </div>

@@ -1,0 +1,13 @@
+[
+    {
+      "id": 1,
+      "question": "Comment évaluez-vous notre service ?",
+      "options": ["Excellent", "Bon", "Moyen", "Mauvais"]
+    },
+    {
+      "id": 2,
+      "question": "Recommanderiez-vous notre produit ?",
+      "options": ["Oui", "Non"]
+    }
+  ]
+  

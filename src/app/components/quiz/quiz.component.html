@@ -1,0 +1,37 @@
+<div class="quiz-container">
+    <mat-card class="mat-elevation-z4" style="max-width: 600px; margin: auto; padding: 20px;">
+      
+      <!-- Timer Component (with spinner and index) -->
+      <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+        <app-timer [timeLeft]="timer" [currentIndex]="currentIndex + 1"></app-timer>
+      </div>
+  
+      <!-- Question Text -->
+      <mat-card-title>Question {{ currentIndex + 1 }}</mat-card-title>
+      <mat-card-subtitle style="margin-bottom: 15px;">
+        {{ questions[currentIndex]?.question }}
+      </mat-card-subtitle>
+  
+      <!-- Options -->
+      <mat-radio-group [(ngModel)]="selectedAnswer" appearance="standard" style="display: flex; flex-direction: column; gap: 10px;">
+        <mat-radio-button
+          *ngFor="let opt of questions[currentIndex]?.options"
+          [value]="opt"
+        >
+          {{ opt }}
+        </mat-radio-button>
+      </mat-radio-group>
+  
+      <!-- Navigation Buttons -->
+      <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+        <button mat-stroked-button color="primary" (click)="back()" [disabled]="currentIndex === 0">
+          Back
+        </button>
+        <button mat-raised-button color="accent" (click)="next()">
+          Next
+        </button>
+      </div>
+      
+    </mat-card>
+  </div>
+  
